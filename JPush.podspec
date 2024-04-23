@@ -14,6 +14,9 @@ Pod::Spec.new do |s|
 
   s.source          = { :git => "https://github.com/jpush/jpush-react-native.git", :tag => "#{s.version}" }
   s.source_files    = 'ios/RCTJPushModule/*.{h,m}'
+  s.resource_bundles = {
+    'JPush_React_Native_Privacy' => ['ios/RCTJPushModule/PrivacyInfo.xcprivacy'],
+  }
   s.preserve_paths  = "*.js"
   s.frameworks      = 'UIKit','CFNetwork','CoreFoundation','CoreTelephony','SystemConfiguration','CoreGraphics','Foundation','Security'
   s.weak_frameworks = 'UserNotifications'
